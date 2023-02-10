@@ -1,0 +1,114 @@
+
+article{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.post:hover {
+    transform: scale(101%);
+    transition: 0.3s ease;
+}
+
+.post-img{
+    border-radius: 30px 30px 0 0;
+    width: 100%;
+    max-height: 20%;
+}
+
+.information {
+    border-radius: 0 0 30px 30px;
+    background-color:aliceblue;
+    padding-top: 1%;
+}
+
+.details {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: .5em;
+}
+
+.autor{
+    width: 10%;
+    border-radius: 50%;
+}
+
+.dot{
+    background-color: darkslategrey;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+}
+
+.social-media {
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+    padding-bottom: 1em;
+}
+
+.description {
+    margin-inline: 5%;
+    margin-bottom: 5%;
+    text-align: justify;
+}
+
+h2{
+    font-weight: bold;
+    font-size: 2em;
+}
+
+.posts{
+    width: 50%;
+    margin: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.cards{
+    width: 50%;
+    margin: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.columns{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+}
+
+.about {
+    background-color:aliceblue;
+    border-radius: 15px;
+    display: flex;
+    flex: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+    width: 40%;
+}
+
+.about:hover{
+    transform: scale(101%);
+    transition: 0.3s ease;
+}
+
+.about img {
+    width: 25%;
+    border-radius: 50%;
+    margin: 1em;
+    border: 0.5px solid gray;
+}
+
+.about small {
+    margin: 1em;
+}

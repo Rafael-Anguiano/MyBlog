@@ -1,0 +1,43 @@
+#contact{
+    height: calc(100vh - 200px);
+    width: 100%;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+form div {
+    display: flex;
+    justify-content: space-around;
+    align-items: space-around;
+    margin: 1em 0;
+}
+
+input {
+    border-radius: 15px;
+    padding:1.1em;
+    margin: 1em;
+    border: none;
+    text-align: center;
+}
+
+input:active, input:focus {
+    outline: none
+}
+
+textarea {
+    border-radius: 15px;
+    width: auto;
+    border: none;
+    padding: 1.1em;
+    width: 30%;
+    margin:20px;
+}
+
+textarea:active, textarea:focus {
+    outline: none;
+}
