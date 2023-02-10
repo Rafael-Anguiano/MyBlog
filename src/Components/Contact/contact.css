@@ -21,8 +21,8 @@ input {
     border-radius: 15px;
     padding:1.1em;
     margin: 1em;
-    border: none;
     text-align: center;
+    border: 1px solid gray;
 }
 
 input:active, input:focus {
@@ -32,7 +32,7 @@ input:active, input:focus {
 textarea {
     border-radius: 15px;
     width: auto;
-    border: none;
+    border: 1px solid gray;
     padding: 1.1em;
     width: 30%;
     margin:20px;

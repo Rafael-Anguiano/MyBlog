@@ -1,9 +1,15 @@
 
 article{
-    width: 50%;
+    width: 60%;
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+
+.post{
+    margin-block: 10px;
+    border: 1px solid gray;
+    border-radius: 30px;
 }
 
 .post:hover {
@@ -12,15 +18,22 @@ article{
 }
 
 .post-img{
+    object-fit: cover;
     border-radius: 30px 30px 0 0;
     width: 100%;
+    height: 20rem;
     max-height: 20%;
+    overflow: hidden;
+}
+
+.post-img{
+    cursor:pointer;
 }
 
 .information {
     border-radius: 0 0 30px 30px;
-    background-color:aliceblue;
     padding-top: 1%;
+    padding-inline: 5%
 }
 
 .details {
@@ -58,6 +71,14 @@ article{
 h2{
     font-weight: bold;
     font-size: 2em;
+    margin-inline: 5%;
+    text-align: left;
+}
+
+h2:hover{
+    cursor: pointer;
+    color: cornflowerblue;
+    transition: 0.1s ease;
 }
 
 .posts{
@@ -67,15 +88,17 @@ h2{
     flex-direction: column;
     justify-content: center;
     align-items: flex-end;
+    flex: 3;
 }
 
 .cards{
     width: 50%;
-    margin: 1em;
+    margin: 1.6em;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
+    flex:2
 }
 
 .columns{
@@ -87,7 +110,6 @@ h2{
 }
 
 .about {
-    background-color:aliceblue;
     border-radius: 15px;
     display: flex;
     flex: column;
@@ -95,6 +117,7 @@ h2{
     align-items: center;
     padding: 1em;
     width: 40%;
+    border: 1px solid gray;
 }
 
 .about:hover{

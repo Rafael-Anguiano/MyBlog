@@ -2,13 +2,35 @@ import React from 'react'
 import { FaRegComment, FaFacebook, FaTwitter, FaLinkedin, FaPinterest, FaTelegram } from 'react-icons/fa';
 import { MdEmail } from 'react-icons/md';
 
+const getImage = (content) => {
+    const searchTerm = 'src=';
+    const searchEnd = '"'
+    const startOfSource = content.indexOf(searchTerm)+5;
+    let image = content.slice(startOfSource)
+    const endOfSource = image.indexOf(searchEnd);
+    image = image.slice(0, endOfSource)
+    return `${image}`
+}
+
+const getDescription = (content) => {
+    const searchEnd = '</p>'
+    let description = content.slice(3)
+    const endOfSource = description.indexOf(searchEnd);
+    description = description.slice(0, endOfSource)
+    return `${description}`
+}
+
 const Post = ({post}) => {
+
+    const image = getImage(post.content)
+    const description = getDescription(post.content)
+
     return (
         <article className='post'>
-            <img className='post-img' src='https://www.cdc.gov/healthypets/images/pets/cute-dog-headshot.jpg?_=42445'/>
+            <img onClick={console.log("")} alt='' className='post-img' src={image}/>
             <div className='information'>
                 <div className='details'>
-                    <img className='autor' src={post.author.image.url}/>
+                    <img alt='' className='autor' src={post.author.image.url}/>
                     <small>{post.author.displayName}</small>
                     <div className='dot'></div>
                     <small>{post.published.substring(0, 10)}</small>
@@ -16,8 +38,8 @@ const Post = ({post}) => {
                     <FaRegComment/>
                     <small>{post.replies.totalItems}</small>
                 </div>
-                <h2>{post.title}</h2>
-                <p className='description'>A lo largo de mi vida como desarrollador me ha tocado aprender varias cosas que no te explican en ningún instituto o universidad. Y en este post me gustaría compartirlas con ustedes.</p>
+                <h2 onClick={console.log("")}>{post.title}</h2>
+                <p className='description' dangerouslySetInnerHTML={{__html: description}} ></p>
                 <div className='social-media'>
                     <button><FaFacebook/></button>
                     <button><FaTwitter/></button>
