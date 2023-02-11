@@ -16,7 +16,7 @@ const Page = ({post}) => {
                     <FaRegComment/>
                     <small>{post.replies.totalItems}</small>
                 </div>
-                <div dangerouslySetInnerHTML={{__html: post.content}} />
+                <div dangerouslySetInnerHTML={{__html: post.content}} className='content'/>
             </section>
             <About/>
         </div>

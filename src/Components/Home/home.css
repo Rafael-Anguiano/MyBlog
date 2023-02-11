@@ -142,7 +142,6 @@ h2:hover{
 }
 
 .page{
-    background-color: aquamarine;
     margin: 1em;
     padding-inline: 5%;
     display: flex;
@@ -166,4 +165,8 @@ h2:hover{
 
 .columns-page .cards {
     flex:1;
+}
+
+.content * {
+    border-radius: 20px;
 }

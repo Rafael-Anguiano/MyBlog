@@ -13,8 +13,10 @@ const getImage = (content) => {
 }
 
 const getDescription = (content) => {
+    const searchTerm = '<p>'
     const searchEnd = '</p>'
-    let description = content.slice(3)
+    const startOfSource = content.indexOf(searchTerm)+3;
+    let description = content.slice(startOfSource)
     const endOfSource = description.indexOf(searchEnd);
     description = description.slice(0, endOfSource)
     return `${description}`
