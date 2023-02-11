@@ -20,14 +20,19 @@ const getDescription = (content) => {
     return `${description}`
 }
 
-const Post = ({post}) => {
+const Post = ({post, setActivePage, setPage}) => {
 
     const image = getImage(post.content)
     const description = getDescription(post.content)
+    
+    const handleClick = () => {
+        setActivePage('Page')
+        setPage(post)
+    }
 
     return (
         <article className='post'>
-            <img onClick={console.log("")} alt='' className='post-img' src={image}/>
+            <img onClick={handleClick} alt='' className='post-img' src={image}/>
             <div className='information'>
                 <div className='details'>
                     <img alt='' className='autor' src={post.author.image.url}/>
@@ -38,7 +43,7 @@ const Post = ({post}) => {
                     <FaRegComment/>
                     <small>{post.replies.totalItems}</small>
                 </div>
-                <h2 onClick={console.log("")}>{post.title}</h2>
+                <h2 onClick={handleClick}>{post.title}</h2>
                 <p className='description' dangerouslySetInnerHTML={{__html: description}} ></p>
                 <div className='social-media'>
                     <button><FaFacebook/></button>

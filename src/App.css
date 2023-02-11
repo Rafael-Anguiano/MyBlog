@@ -90,3 +90,7 @@ button:hover {
 .social-links {
   margin-inline: 30px;
 }
+
+.name{
+  cursor: pointer;
+}

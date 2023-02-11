@@ -106,7 +106,6 @@ h2:hover{
     display: flex;
     justify-content: center;
     align-items: flex-start;
-
 }
 
 .about {
@@ -134,4 +133,37 @@ h2:hover{
 
 .about small {
     margin: 1em;
+}
+
+.columns-page{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.page{
+    background-color: aquamarine;
+    margin: 1em;
+    padding-inline: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: justify;
+    flex: 2;
+}
+
+.page h2{
+    margin-inline: 0;
+}
+
+.page .details {
+    width: 35%;
+    height: 1em;
+    margin-top: 0;
+    margin-bottom: 2em;
+}
+
+.columns-page .cards {
+    flex:1;
 }
