@@ -32,7 +32,6 @@ function App(){
           <ul>
             <li><button onClick={() => setActivePage('Home')}>Home</button></li>
             <li><button onClick={() => setActivePage('Contact')}>Contact me</button></li>
-            <li><button>About</button></li>
           </ul>
         </nav>
         <div className='social-links'>

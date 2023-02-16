@@ -12,10 +12,10 @@ To install this repository correctly follow the next steps.
 
 1. First of all, in the terminal put the next code to clone this repository:
 
-    ```sh
-        git clone https://github.com/Rafael-Anguiano/MyBlog.git
-        cd MyBlog
-    ```
+```sh
+    git clone https://github.com/Rafael-Anguiano/MyBlog.git
+    cd MyBlog
+```
 
 2. The next step is install the dependencies and node-modules.
 
