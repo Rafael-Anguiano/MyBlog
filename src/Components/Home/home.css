@@ -149,7 +149,7 @@ h2:hover{
     justify-content: center;
     align-items: flex-start;
     text-align: justify;
-    flex: 2;
+    flex: 1;
 }
 
 .page h2{
@@ -169,4 +169,9 @@ h2:hover{
 
 .content * {
     border-radius: 20px;
+    text-align: justify;
+}
+
+.content p {
+    text-align: justify;
 }

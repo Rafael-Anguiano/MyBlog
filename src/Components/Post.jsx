@@ -1,5 +1,5 @@
 import React from 'react'
-import { FaRegComment, FaFacebook, FaTwitter, FaLinkedin, FaPinterest, FaTelegram } from 'react-icons/fa';
+import { FaRegComment, FaTwitter, FaLinkedin, FaWhatsapp } from 'react-icons/fa';
 import { MdEmail } from 'react-icons/md';
 
 const getImage = (content) => {
@@ -48,12 +48,10 @@ const Post = ({post, setActivePage, setPage}) => {
                 <h2 onClick={handleClick}>{post.title}</h2>
                 <p className='description' dangerouslySetInnerHTML={{__html: description}} ></p>
                 <div className='social-media'>
-                    <button><FaFacebook/></button>
-                    <button><FaTwitter/></button>
-                    <button><FaLinkedin/></button>
-                    <button><FaPinterest/></button>
-                    <button><FaTelegram/></button>
-                    <button><MdEmail/></button>
+                <a href={'https://www.linkedin.com/in/rafael-anguiano/'} target="_blank" rel="noreferrer"><button><FaLinkedin/></button></a>
+                <a href={'mailto:rj.anguiano.23@gmail.com'} target="_blank" rel="noreferrer"><button><MdEmail/></button></a>
+                <a href={'https://wa.me/+523331504871'} target="_blank" rel="noreferrer"><button><FaWhatsapp/></button></a>
+                <a href={'https://twitter.com/Rezuks23'} target="_blank" rel="noreferrer"><button><FaTwitter/></button></a>
                 </div>
             </div>
         </article>
