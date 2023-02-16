@@ -8,7 +8,8 @@ const About = () => {
     <section className='cards'>
         <article className='about'>
         <img alt='' src="./me.jpg"/>
-        <small>I am an engineering student motivated to learn and grow both professionally and personally.</small>
+        <small>Hi All ! 😁 I´m a Software Engineer, who is really passionate about technology and programming. 
+I have a Bachelors Degree in Computer Software Engineering, and I´m currently working as a Software Developer at Intel.</small>
         <div>
           <a href={'https://www.linkedin.com/in/rafael-anguiano/'} target="_blank" rel="noreferrer"><button><FaLinkedin/></button></a>
           <a href={'mailto:rj.anguiano.23@gmail.com'} target="_blank" rel="noreferrer"><button><MdEmail/></button></a>
