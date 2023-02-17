@@ -7,7 +7,7 @@ const About = () => {
   return (
     <section className='cards'>
         <article className='about'>
-        <img alt='' src="./me.jpg"/>
+        <img alt='' src="../me.jpg"/>
         <small>Hi All ! 😁 I´m a Software Engineer who is really passionate about technology and programming. I have a Bachelors Degree in Computer Software Engineering, and I love to develop for fun and learn new things.</small>
         <div>
           <a href={'https://www.linkedin.com/in/rafael-anguiano/'} target="_blank" rel="noreferrer"><button><FaLinkedin/></button></a>
