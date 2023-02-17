@@ -135,4 +135,10 @@ a{
   .comments{
     display: none;
   }
+  header .social-links {
+    display: none;
+  }
+  header .home-btn {
+    display: none;
+  }
 }
