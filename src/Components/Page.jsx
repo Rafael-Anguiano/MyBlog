@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
-import About from '../About'
+import About from './About'
 import {FaRegComment} from 'react-icons/fa'
 import { useParams } from 'react-router-dom'
 

@@ -1,6 +1,6 @@
 import React from 'react'
-import Post from '../Post';
-import About from '../About';
+import Post from './Post';
+import About from './About';
 import './home.css'
 
 const Home = ({posts, setPage}) => {

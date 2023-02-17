@@ -2,11 +2,11 @@ import { useState, useEffect } from 'react';
 import axios from "axios";
 
 import Header from './Components/Header';
-import Footer from './Footer';
-import Home from './Components/Home/Home';
-import Contact from './Components/Contact/Contact';
-import Page from './Components/Home/Page'
-import ErrorPage from './ErrorPage';
+import Footer from './Components/Footer';
+import Home from './Components/Home';
+import Contact from './Components/Contact';
+import Page from './Components/Page'
+import ErrorPage from './Components/ErrorPage';
 
 import { Routes, Route  } from "react-router-dom";
 import './App.css';
