@@ -2,6 +2,8 @@ import React from 'react'
 import { FaRegComment, FaTwitter, FaLinkedin, FaWhatsapp } from 'react-icons/fa';
 import { MdEmail } from 'react-icons/md';
 
+import { Link } from 'react-router-dom';
+
 const getImage = (content) => {
     const searchTerm = 'src=';
     const searchEnd = '"'
@@ -22,19 +24,18 @@ const getDescription = (content) => {
     return `${description}`
 }
 
-const Post = ({post, setActivePage, setPage}) => {
+const Post = ({post, setPage}) => {
 
     const image = getImage(post.content)
     const description = getDescription(post.content)
     
     const handleClick = () => {
-        setActivePage('Page')
         setPage(post)
     }
 
     return (
         <article className='post'>
-            <img onClick={handleClick} alt='' className='post-img' src={image}/>
+            <Link to={`/post/${post.id}`}><img onClick={handleClick} alt='' className='post-img' src={image}/></Link>
             <div className='information'>
                 <div className='details'>
                     <img alt='' className='autor' src={post.author.image.url}/>
@@ -45,7 +46,7 @@ const Post = ({post, setActivePage, setPage}) => {
                     <FaRegComment/>
                     <small>{post.replies.totalItems}</small>
                 </div>
-                <h2 onClick={handleClick}>{post.title}</h2>
+                <Link to={`/post/${post.id}`}><h2 onClick={handleClick}>{post.title}</h2></Link>
                 <p className='description' dangerouslySetInnerHTML={{__html: description}} ></p>
                 <div className='social-media'>
                 <a href={'https://www.linkedin.com/in/rafael-anguiano/'} target="_blank" rel="noreferrer"><button><FaLinkedin/></button></a>
