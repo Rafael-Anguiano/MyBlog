@@ -45,7 +45,6 @@ small {
   text-decoration: overline;
 }
 
-
 main {
   display: flex;
   flex-direction: column;
@@ -101,4 +100,39 @@ a{
   text-decoration: none;
   color:inherit;
   cursor: pointer;
+}
+
+@media screen and (max-width: 800px) {
+  main {
+    background-color: white;
+  }
+  .cards{
+    display: none;
+  }
+  .posts {
+    align-items: center;
+    margin: 0.5em;
+    width: 100%;
+  }
+  .post{
+    margin-block: none;
+  }
+
+  .post-img{
+    height: 10rem;
+  }
+  .post .description {
+    display: none;
+  }
+
+  article {
+    width: 90%;
+  }
+
+  .dot{
+    display: none;
+  }
+  .comments{
+    display: none;
+  }
 }

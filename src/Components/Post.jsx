@@ -43,8 +43,8 @@ const Post = ({post, setPage}) => {
                     <div className='dot'></div>
                     <small>{post.published.substring(0, 10)}</small>
                     <div className='dot'></div>
-                    <FaRegComment/>
-                    <small>{post.replies.totalItems}</small>
+                    <FaRegComment className='comments'/>
+                    <small className='comments'>{post.replies.totalItems}</small>
                 </div>
                 <Link to={`/post/${post.id}`}><h2 onClick={handleClick}>{post.title}</h2></Link>
                 <p className='description' dangerouslySetInnerHTML={{__html: description}} ></p>
