@@ -31,7 +31,6 @@ input:active, input:focus {
 
 textarea {
     border-radius: 15px;
-    width: auto;
     border: 1px solid gray;
     padding: 1.1em;
     width: 30%;
