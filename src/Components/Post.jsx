@@ -43,16 +43,16 @@ const Post = ({post, setPage}) => {
                     <div className='dot'></div>
                     <small>{post.published.substring(0, 10)}</small>
                     <div className='dot'></div>
-                    <FaRegComment/>
-                    <small>{post.replies.totalItems}</small>
+                    <FaRegComment className='comments'/>
+                    <small className='comments'>{post.replies.totalItems}</small>
                 </div>
                 <Link to={`/post/${post.id}`}><h2 onClick={handleClick}>{post.title}</h2></Link>
                 <p className='description' dangerouslySetInnerHTML={{__html: description}} ></p>
                 <div className='social-media'>
-                <a href={'https://www.linkedin.com/in/rafael-anguiano/'} target="_blank" rel="noreferrer"><button><FaLinkedin/></button></a>
-                <a href={'mailto:rj.anguiano.23@gmail.com'} target="_blank" rel="noreferrer"><button><MdEmail/></button></a>
-                <a href={'https://wa.me/+523331504871'} target="_blank" rel="noreferrer"><button><FaWhatsapp/></button></a>
-                <a href={'https://twitter.com/Rezuks23'} target="_blank" rel="noreferrer"><button><FaTwitter/></button></a>
+                    <a href={'https://www.linkedin.com/in/rafael-anguiano/'} target="_blank" rel="noreferrer"><button><FaLinkedin/></button></a>
+                    <a href={'mailto:rj.anguiano.23@gmail.com'} target="_blank" rel="noreferrer"><button><MdEmail/></button></a>
+                    <a href={'https://wa.me/+523331504871'} target="_blank" rel="noreferrer"><button><FaWhatsapp/></button></a>
+                    <a href={'https://twitter.com/Rezuks23'} target="_blank" rel="noreferrer"><button><FaTwitter/></button></a>
                 </div>
             </div>
         </article>

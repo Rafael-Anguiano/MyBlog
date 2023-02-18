@@ -10,8 +10,8 @@ const Header = () => {
       <h1 className='name' onClick={() => navigate('/')}>Rafael</h1>
       <nav>
         <ul>
-          <li><button onClick={() => navigate('/')}>Home</button></li>
-          <li><button onClick={() => navigate('/contact')}>Contact me</button></li>
+          <li className='home-btn'><button onClick={() => navigate('/')}>Home</button></li>
+          <li className='contact-btn'><button onClick={() => navigate('/contact')}>Contact me</button></li>
         </ul>
       </nav>
       <div className='social-links'>

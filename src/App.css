@@ -45,7 +45,6 @@ small {
   text-decoration: overline;
 }
 
-
 main {
   display: flex;
   flex-direction: column;
@@ -101,4 +100,94 @@ a{
   text-decoration: none;
   color:inherit;
   cursor: pointer;
+}
+
+@media screen and (max-width: 800px) {
+  main {
+    background-color: white;
+  }
+  .cards{
+    display: none;
+  }
+  .posts {
+    align-items: center;
+    margin: 0.5em;
+    width: 100%;
+  }
+  .post{
+    margin-block: none;
+  }
+
+  .post-img{
+    height: 10rem;
+  }
+  .post .description {
+    display: none;
+  }
+
+  article {
+    width: 90%;
+  }
+
+  .dot:nth-of-type(2) {
+    display: none;
+  }
+  .comments{
+    display: none;
+  }
+  header .social-links {
+    display: none;
+  }
+  header .home-btn {
+    display: none;
+  }
+
+  form div {
+    flex-direction: column;
+    margin: none none;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 0.5em;
+  }
+
+  input {
+    margin: 0.5em;
+    width: 70%;
+    padding: none;
+  }
+
+  textarea {
+    padding: none;
+    border-radius: 15px;
+    border: 1px solid gray;
+    width: 70%;
+    margin: 0px;
+    margin-bottom: 0.5em;
+  }
+  #contact h1 {
+    margin: 1em;
+  }
+
+  .columns-page{
+    width: 100%;
+  }
+
+  .page{
+    width: 80%;
+    margin: 0em;
+    align-items: center;
+  }
+
+  .page .details {
+    width: 100%;
+    height: 1em;
+    margin-top: 0;
+    margin-bottom: 2em;
+  }
+
+  .content * {
+    width: 98%;
+    margin-inline: 0;
+  }
 }
