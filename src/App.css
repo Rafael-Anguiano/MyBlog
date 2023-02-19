@@ -88,11 +88,6 @@ button:hover {
   background-color: #471d1d;
   color: white;
 }
-
-.social-links {
-  margin-inline: 30px;
-}
-
 .name{
   cursor: pointer;
 }
@@ -133,9 +128,6 @@ a{
     display: none;
   }
   .comments{
-    display: none;
-  }
-  header .social-links {
     display: none;
   }
   header .home-btn {
