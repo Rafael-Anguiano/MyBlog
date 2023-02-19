@@ -1,9 +1,16 @@
 import React from 'react'
+import { useLocation } from 'react-router-dom';
 import './contact.css'
+import SEO from './SEO';
+import image from '../assets/image.png'
 
 const Contact = () => {
+    const location = useLocation();
+    let title = "Rafael Anguiano | Blog"
+    let description = "Hi All :) Check out my blog"
     return (
         <section id="contact">
+            <SEO title={title} image={image} pathname={location.pathname} description={description}/>
             <div>
                 <h1>CONTACT</h1>
                 <small>Submit the form below to get in touch with me</small>

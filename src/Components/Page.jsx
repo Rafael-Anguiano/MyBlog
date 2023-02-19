@@ -3,7 +3,8 @@ import axios from 'axios'
 import About from './About'
 import {FaRegComment} from 'react-icons/fa'
 import { useParams, useLocation } from 'react-router-dom'
-import { Helmet } from 'react-helmet'
+import SEO from './SEO'
+import { getDescription, getImage } from '../functions/gets'
 
 const API_KEY = process.env.REACT_APP_API_KEY
 const BLOG_ID = process.env.REACT_APP_BLOG_ID
@@ -24,22 +25,12 @@ let defPost = {
 }
 
 const Page = ({page = defPost}) => {
-
-    const getImage = (content) => {
-        const searchTerm = 'src=';
-        const searchEnd = '"'
-        const startOfSource = content.indexOf(searchTerm)+5;
-        let image = content.slice(startOfSource)
-        const endOfSource = image.indexOf(searchEnd);
-        image = image.slice(0, endOfSource)
-        return `${image}`
-    }
-
     
     let { id } = useParams()
     const [post, setPost] = useState(page)
     const location = useLocation();
     let image = getImage(post?.content)
+    let description = getDescription(post?.content)
 
     useEffect(() => {
         if(page === defPost){
@@ -52,14 +43,7 @@ const Page = ({page = defPost}) => {
 
     return (
         <div className='columns-page'>
-            <Helmet>
-                <meta charSet="utf-8" />
-                <title>{post.title}</title>
-                <meta property="og:title" content={post.title}/>
-                <meta property="og:type" content="website"/>
-                <meta property="og:image" content={image}/>
-                <meta property="og:url" content={`https://blog-rafael-anguiano.vercel.app${location.pathname}`}></meta>
-            </Helmet>
+            <SEO title={post.title} image={image} pathname={location.pathname} description={description}/>
             <section className='page'>
                 <h2>{post?.title}</h2>
                 <div className='details'>
