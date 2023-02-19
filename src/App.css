@@ -80,6 +80,7 @@ button {
   padding-inline: 20px;
   font-weight: bold;
   font-size: 1.05rem;
+  cursor: pointer;
 }
 
 button:hover {
