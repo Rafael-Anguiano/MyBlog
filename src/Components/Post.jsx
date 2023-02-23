@@ -34,7 +34,7 @@ const Post = ({post, setPage}) => {
                     <a href={`mailto:rj.anguiano.23@gmail.com?subject=${encodeURI("Rafael Anguiano | Blog")}&body=${encodeURI(`Please check this amazing post titled "${post.title}" in the next URL:`)+`%0Ahttps://blog-rafael-anguiano.vercel.app/post/${post.id} %0A`}`} target="_blank" rel="noreferrer">
                         <button><MdEmail/></button>
                     </a>
-                    <a href={`https://wa.me/+523331504871?text=${encodeURI(`Please check this amazing post titled '${post.title}' in the next URL:`)+`%0Ahttps://blog-rafael-anguiano.vercel.app/post/${post.id} %0A`}`} target="_blank" rel="noreferrer">
+                    <a href={`https://wa.me/?text=${encodeURI(`Please check this amazing post titled '${post.title}' in the next URL:`)+`%0Ahttps://blog-rafael-anguiano.vercel.app/post/${post.id} %0A`}`} target="_blank" rel="noreferrer">
                         <button><FaWhatsapp/></button>
                     </a>
                     <a href={`https://twitter.com/intent/tweet?text=${encodeURI(`Hey! Check out this Interesting Post:`)+`%0Ahttps://blog-rafael-anguiano.vercel.app/post/${post.id} %0A`}`} target="_blank" rel="noreferrer">
