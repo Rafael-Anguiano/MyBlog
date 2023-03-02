@@ -1,10 +1,10 @@
 import React from 'react'
 import Post from './Post';
-import About from './About';
 import image from '../assets/image.png'
 import './home.css'
 import { useLocation } from 'react-router-dom';
 import SEO from './SEO';
+import ColumnTwo from './ColumnTwo';
 
 const Home = ({posts, setPage}) => {
   const location = useLocation();
@@ -19,7 +19,7 @@ const Home = ({posts, setPage}) => {
         <section className='posts'>
           {posts.map((post, index) => <Post post={post} key={index} setPage={setPage}/>)}
         </section>
-        <About/>
+        <ColumnTwo posts={posts}/>
       </div>
     </section>
   )

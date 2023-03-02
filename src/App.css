@@ -98,6 +98,87 @@ a{
   cursor: pointer;
 }
 
+.recent-post ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.list-item{
+  margin: 0;
+  width: 100%;
+  text-overflow: ellipsis;
+  text-align: justify;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 90%;
+  padding-block: 1rem;
+}
+
+.list-item span {
+  font-weight: bold;
+}
+
+.recent-post li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  border-bottom: 1px solid #d5d5d5;
+}
+
+li:hover{
+  color: cornflowerblue;
+}
+
+h3 {
+  margin-block: 0;
+}
+
+
+.recent-post {
+  border-radius: 15px;
+  display: flex;
+  flex: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
+  width: 40%;
+  border: 1px solid gray;
+  margin-block: 2em;
+}
+
+.recent-post:hover{
+  transform: scale(101%);
+  transition: 0.3s ease;
+}
+
+.sponsor{
+  border-radius: 15px;
+  display: flex;
+  flex: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
+  width: 40%;
+  border: 1px solid gray;
+  margin-block: 2em;
+  margin-top: 0em;
+}
+
+.sponsor:hover{
+  transform: scale(101%);
+  transition: 0.3s ease;
+}
+
+.sponsor .icon {
+  font-size: 3.2em;
+}
+
 @media screen and (max-width: 800px) {
   main {
     background-color: white;

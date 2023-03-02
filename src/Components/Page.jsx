@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
-import About from './About'
+import ColumnTwo from './ColumnTwo'
+import SEO from './SEO'
 import {FaRegComment} from 'react-icons/fa'
 import { useParams, useLocation } from 'react-router-dom'
-import SEO from './SEO'
 import { getDescription, getImage } from '../functions/gets'
 
 const API_KEY = process.env.REACT_APP_API_KEY
@@ -43,7 +43,7 @@ const Page = ({page = defPost}) => {
 
     return (
         <div className='columns-page'>
-            <SEO title={post.title} image={image} pathname={location.pathname} description={description}/>
+            <SEO title={post?.title} image={image} pathname={location.pathname} description={description}/>
             <section className='page'>
                 <h2>{post?.title}</h2>
                 <div className='details'>
@@ -57,7 +57,7 @@ const Page = ({page = defPost}) => {
                 </div>
                 <div dangerouslySetInnerHTML={{__html: post?.content}} className='content'/>
             </section>
-            <About/>
+            <ColumnTwo/>
         </div>
     )
 }
