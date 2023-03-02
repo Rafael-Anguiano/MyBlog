@@ -19,7 +19,7 @@ const Home = ({posts, setPage}) => {
         <section className='posts'>
           {posts.map((post, index) => <Post post={post} key={index} setPage={setPage}/>)}
         </section>
-        <ColumnTwo posts={posts}/>
+        <ColumnTwo posts={posts} setPage={setPage}/>
       </div>
     </section>
   )

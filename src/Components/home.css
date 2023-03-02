@@ -117,6 +117,7 @@ h2:hover{
     padding: 1em;
     width: 40%;
     border: 1px solid gray;
+    margin-bottom: 1em;
 }
 
 .about:hover{

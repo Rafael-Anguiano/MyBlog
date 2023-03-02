@@ -44,7 +44,7 @@ function App(){
             />
           <Route
             path='/post/:id' 
-            element={<Page page={page}/>} 
+            element={<Page page={page} posts={posts} setPage={setPage}/>} 
             errorElement={<ErrorPage/>}
             loader={async ({ params }) => `/post/${params.id}`}
             />

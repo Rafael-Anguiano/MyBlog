@@ -24,7 +24,7 @@ let defPost = {
     },
 }
 
-const Page = ({page = defPost}) => {
+const Page = ({page = defPost, posts, setPage}) => {
     
     let { id } = useParams()
     const [post, setPost] = useState(page)
@@ -57,7 +57,7 @@ const Page = ({page = defPost}) => {
                 </div>
                 <div dangerouslySetInnerHTML={{__html: post?.content}} className='content'/>
             </section>
-            <ColumnTwo/>
+            <ColumnTwo list={posts} setPage={setPage}/>
         </div>
     )
 }
