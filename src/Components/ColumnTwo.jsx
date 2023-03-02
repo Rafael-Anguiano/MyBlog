@@ -10,7 +10,7 @@ const ColumnTwo = ({posts}) => {
         { posts &&
           <ListPosts  list={posts.slice(0,5)}/>
         }
-        <Sponsor/>
+        {/* <Sponsor/> */}
     </section>
   )
 }
