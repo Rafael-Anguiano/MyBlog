@@ -11,8 +11,8 @@ const Sponsor = () => {
             :<BsHeart className='icon'/>
         }
       </a>
-      <a href='https://github.com/sponsors/Rafael-Anguiano?o=sd&sc=t' target={"_blank"} rel="noreferrer" onMouseOver={()=>setHover(true)} onMouseOut={()=>setHover(false)}>
-        <h3 className={hover? "title-hovered" : ""}>Become a Sponsor!</h3>
+      <a href='https://github.com/sponsors/Rafael-Anguiano?o=sd&sc=t' target={"_blank"} rel="noreferrer">
+        <h3 className={hover? "title-hovered" : ""} onMouseOver={()=>setHover(true)} onMouseOut={()=>setHover(false)}>Become a Sponsor!</h3>
       </a>
       <small>Support my open source work! It would help me to follow my dreams and ideas</small>
 

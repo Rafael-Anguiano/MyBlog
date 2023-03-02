@@ -16,7 +16,7 @@ const ListPosts = ({list= [], setPage}) => {
         <article className='recent-post'>
             <h3>Recent Posts</h3>
             <ul>
-                {list.map((item, index) => {
+                {list?.map((item, index) => {
                     return (
                         <li key={item?.id}>
                             <Link to={`/post/${item?.id}`} className="list-item" onClick={()=>handleClick(item)}><span>{index+1}. </span>{item?.title}</Link>
