@@ -20,9 +20,9 @@ const Page = async ({ params }) => {
       <Head>
         <title>{post.title}</title>
         <meta property='og:title' content={post.title} key='title' />
-        <meta property='og:type' content='website' />
-        <meta property='og:image' content={image} />
-        <meta property='og:description' content={description} />
+        <meta property='og:type' content='website' key='type' />
+        <meta property='og:image' content={image} key='image' />
+        <meta property='og:description' content={description} key='description' />
       </Head>
       <section className='page'>
         <h2>{post?.title}</h2>
