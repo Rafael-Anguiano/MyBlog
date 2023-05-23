@@ -1,8 +1,8 @@
-import { FaTwitter, FaLinkedin, FaWhatsapp } from 'react-icons/fa';
-import { MdEmail} from 'react-icons/md';
-import Link from 'next/link';
+import { FaTwitter, FaLinkedin, FaWhatsapp } from 'react-icons/fa'
+import { MdEmail } from 'react-icons/md'
+import Link from 'next/link'
 
-import Image from 'next/image';
+import Image from 'next/image'
 
 const About = () => {
   return (

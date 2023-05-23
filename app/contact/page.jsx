@@ -1,6 +1,5 @@
 import About from "../components/About"
 import Sponsor from "../components/Sponsor"
-import {usePathname} from "next/navigation"
 
 const Contact = () => {
     return (

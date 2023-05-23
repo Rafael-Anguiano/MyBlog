@@ -1,6 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
-import {HiArrowRight} from 'react-icons/hi'
+import { HiArrowRight } from 'react-icons/hi'
 
 const API_KEY = process.env.REACT_APP_API_KEY
 const BLOG_ID = process.env.REACT_APP_BLOG_ID

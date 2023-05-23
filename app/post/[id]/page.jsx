@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import {FaRegComment} from 'react-icons/fa'
+import { FaRegComment } from 'react-icons/fa'
 import { getDescription, getImage } from '../../functions/gets'
 
 const API_KEY = process.env.REACT_APP_API_KEY

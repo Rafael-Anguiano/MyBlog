@@ -1,7 +1,7 @@
 "use client"
-import {useState} from 'react'
+import { useState } from 'react'
 import Link from 'next/link'
-import {BsHeart, BsHeartFill} from 'react-icons/bs'
+import { BsHeart, BsHeartFill } from 'react-icons/bs'
 
 const Sponsor = () => {
     const [hover, setHover] = useState(false)
