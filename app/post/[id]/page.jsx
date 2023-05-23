@@ -1,9 +1,26 @@
-import Head from 'next/head'
 import { FaRegComment } from 'react-icons/fa'
 import { getDescription, getImage } from '../../functions/gets'
 
 const API_KEY = process.env.REACT_APP_API_KEY
 const BLOG_ID = process.env.REACT_APP_BLOG_ID
+
+export async function generateMetadata ({ params, searchParams }, parent) {
+  const id = params.id
+  // fetch data
+  const post = await fetch(`https://www.googleapis.com/blogger/v3/blogs/${BLOG_ID}/posts/${id}?key=${API_KEY}`, { cache: 'no-store' })
+    .then((res) => res.json())
+  // optionally access and extend (rather than replace) parent metadata
+  const image = getImage(post?.content)
+  const description = getDescription(post?.content)
+
+  return {
+    title: post.title,
+    openGraph: {
+      images: [image],
+      description
+    }
+  }
+}
 
 const fetchPage = (id) => {
   return fetch(`https://www.googleapis.com/blogger/v3/blogs/${BLOG_ID}/posts/${id}?key=${API_KEY}`, { cache: 'no-store' })
@@ -15,15 +32,9 @@ const Page = async ({ params }) => {
   const post = await fetchPage(id)
   const image = getImage(post?.content)
   const description = getDescription(post?.content)
+
   return (
     <div className='columns-page'>
-      <Head>
-        <title>{post.title}</title>
-        <meta property='og:title' content={post.title} key='title' />
-        <meta property='og:type' content='website' key='type' />
-        <meta property='og:image' content={image} key='image' />
-        <meta property='og:description' content={description} key='description' />
-      </Head>
       <section className='page'>
         <h2>{post?.title}</h2>
         <div className='details'>
