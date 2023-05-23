@@ -8,11 +8,11 @@ export default function RootLayout({children}) {
     <html lang="en">
       <head>
         <title>Rafael Anguiano | Blog</title>
-        <meta property="og:title" content="Rafael Anguiano | Blog" data-react-helmet="true"/>
-        <meta property="og:type" content="website" data-react-helmet="true"/>
-        <meta property="og:image" content="/images/image.png" data-react-helmet="true"/>
-        <meta property="og:url" content="https://blog-rafael-anguiano.vercel.app/" data-react-helmet="true"/>
-        <meta property="og:description" content="Hi All :) Check out my blog" data-react-helmet="true"/>
+        <meta property="og:title" content="Rafael Anguiano | Blog" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="/images/image.png" />
+        <meta property="og:url" content="https://blog-rafael-anguiano.vercel.app/" />
+        <meta property="og:description" content="Hi All :) Check out my blog" />
       </head>
       <body>
         <main>

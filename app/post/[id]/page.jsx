@@ -1,3 +1,4 @@
+import Head from 'next/head'
 import {FaRegComment} from 'react-icons/fa'
 import { getDescription, getImage } from '../../functions/gets'
 
@@ -19,6 +20,13 @@ const Page = async ({params}) => {
 
     return (
         <div className='columns-page'>
+            <Head>
+                <title>{post.title}</title>
+                <meta property="og:title" content={post.title} key="title" />
+                <meta property="og:type" content="website"/>
+                <meta property="og:image" content={image}/>
+                <meta property="og:description" content={description}/>
+            </Head>
             <section className='page'>
                 <h2>{post?.title}</h2>
                 <div className='details'>
