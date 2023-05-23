@@ -6,10 +6,8 @@ const BLOG_ID = process.env.REACT_APP_BLOG_ID
 
 export async function generateMetadata ({ params, searchParams }, parent) {
   const id = params.id
-  // fetch data
   const post = await fetch(`https://www.googleapis.com/blogger/v3/blogs/${BLOG_ID}/posts/${id}?key=${API_KEY}`, { cache: 'no-store' })
     .then((res) => res.json())
-  // optionally access and extend (rather than replace) parent metadata
   const image = getImage(post?.content)
   const description = getDescription(post?.content)
 
@@ -30,8 +28,6 @@ const fetchPage = (id) => {
 const Page = async ({ params }) => {
   const { id } = params
   const post = await fetchPage(id)
-  // const image = getImage(post?.content)
-  // const description = getDescription(post?.content)
 
   return (
     <div className='columns-page'>
