@@ -7,7 +7,7 @@ export const metadata = {
   title: 'Rafael Anguiano | Blog',
   description: 'Hi All :) Check out my blog',
   url: 'https://blog-rafael-anguiano.vercel.app/',
-  image: '/images/image.png',
+  image: ['/images/image.png'],
   type: 'website'
 }
 
