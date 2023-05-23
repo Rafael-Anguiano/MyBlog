@@ -30,8 +30,8 @@ const fetchPage = (id) => {
 const Page = async ({ params }) => {
   const { id } = params
   const post = await fetchPage(id)
-  const image = getImage(post?.content)
-  const description = getDescription(post?.content)
+  // const image = getImage(post?.content)
+  // const description = getDescription(post?.content)
 
   return (
     <div className='columns-page'>
