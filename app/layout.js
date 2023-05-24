@@ -5,7 +5,7 @@ import Head from 'next/head'
 
 export const metadata = {
   title: 'Rafael Anguiano | Blog',
-  description: 'Hi All :) Check out my blog',
+  description: 'Hi Everyone :) Check out my blog',
   url: 'https://blog-rafael-anguiano.vercel.app/',
   type: 'website'
 }
