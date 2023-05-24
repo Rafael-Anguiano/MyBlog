@@ -2,7 +2,7 @@ import ColumnTwo from './components/ColumnTwo'
 import Navigation from './components/Navigation'
 import '../styles/globals.css'
 import Head from 'next/head'
-import image from '../../../../../images/image.png'
+import image from '../public/images/image.png'
 
 export const metadata = {
   title: 'Rafael Anguiano | Blog',
