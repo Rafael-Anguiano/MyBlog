@@ -7,7 +7,6 @@ export const metadata = {
   title: 'Rafael Anguiano | Blog',
   description: 'Hi All :) Check out my blog',
   url: 'https://blog-rafael-anguiano.vercel.app/',
-  images: ['/images/image.png'],
   type: 'website'
 }
 
@@ -16,6 +15,7 @@ export default function RootLayout ({ children }) {
     <html lang='en'>
       <Head>
         <title>Rafael Anguiano | Blog</title>
+        <meta property='og:image' content='/images/image.png' />
       </Head>
       <body>
         <main>
