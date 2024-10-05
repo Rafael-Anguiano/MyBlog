@@ -17,7 +17,7 @@ const HomePage = async () => {
   return (
     <section id='Home'>
       <section className='posts'>
-        {posts.items.map((post, index) => <Post post={post} key={index} />)}
+        {posts.items?.map((post, index) => <Post post={post} key={index} />)}
       </section>
     </section>
   )

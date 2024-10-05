@@ -11,12 +11,12 @@ const fetchPosts = () => {
 }
 
 const ListPosts = async () => {
-  const list = await fetchPosts()
+  const list = await fetchPosts();
   return (
     <article className='recent-post'>
       <h3>Recent Posts</h3>
       <ul>
-        {list.items.slice(0, 5).map((item, index) => {
+        {list.items?.slice(0, 5).map((item, index) => {
           return (
             <li key={item?.id}>
               <Link href={`/post/${item?.id}`} className='list-item'><span>{index + 1}. </span>
