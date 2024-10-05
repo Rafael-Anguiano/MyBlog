@@ -6,8 +6,8 @@ const ColumnTwo = () => {
   return (
     <section className='cards'>
       <About />
-      <Sponsor />
       <ListPosts />
+      <Sponsor />
     </section>
   )
 }
