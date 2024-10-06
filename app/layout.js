@@ -3,7 +3,7 @@ import Navigation from './components/Navigation'
 import '../styles/globals.css'
 import Head from 'next/head'
 
-export async function generateMetadata ({ params, searchParams }, parent) {
+export async function generateMetadata() {
   return {
     title: 'Rafael Anguiano | Blog',
     openGraph: {
@@ -15,7 +15,7 @@ export async function generateMetadata ({ params, searchParams }, parent) {
   }
 }
 
-export default function RootLayout ({ children }) {
+export default function RootLayout({ children }) {
   return (
     <html lang='en'>
       <Head>

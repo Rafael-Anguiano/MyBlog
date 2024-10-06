@@ -1,13 +1,11 @@
-import About from './About'
 import ListPosts from './ListPosts'
-import Sponsor from './Sponsor'
+import PostTags from './PostTags'
 
 const ColumnTwo = () => {
   return (
     <section className='cards'>
-      <About />
+      <PostTags />
       <ListPosts />
-      <Sponsor />
     </section>
   )
 }
