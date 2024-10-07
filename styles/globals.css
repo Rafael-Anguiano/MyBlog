@@ -193,6 +193,12 @@ h3 {
   width: 40%;
 }
 
+.post-description {
+  border-bottom: 1px solid #d5d5d5;
+  margin: 0.7rem;
+  padding-bottom: 1rem;
+}
+
 .tags {
   align-items: center;
   display: flex;
@@ -201,7 +207,7 @@ h3 {
   gap: 0.3rem;
   justify-content: start;
   list-style: none;
-  margin: 0.7rem;
+  margin: 0.6rem;
 }
 
 .tags li {

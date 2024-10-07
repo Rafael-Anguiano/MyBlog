@@ -1,13 +1,22 @@
 'use client'
-
 import { FaRegComment, FaTwitter, FaLinkedin, FaWhatsapp } from 'react-icons/fa'
 import { MdEmail } from 'react-icons/md'
 import Link from 'next/link'
+import usePosts from '../stores/usePosts'
 import { getDescription, getImage } from '../functions/gets'
+import { useEffect } from 'react'
 
 const Post = ({ post, setPage }) => {
   const image = getImage(post.content)
   const description = getDescription(post.content)
+  const displayInfo = usePosts(state => state.displayInfo)
+  const showInfo = usePosts(state => state.showInfo)
+
+  useEffect(() => {
+    if (displayInfo) {
+      showInfo(false);
+    }
+  }, [])
 
   return (
     <article className='post'>
@@ -24,7 +33,9 @@ const Post = ({ post, setPage }) => {
           <FaRegComment className='comments' />
           <small className='comments'>{post.replies.totalItems}</small>
         </div>
-        <Link href={`/post/${post.id}`}><h2 className='subtitle'>{post.title}</h2></Link>
+        <Link href={`/post/${post.id}`} >
+          <h2 className='subtitle'>{post.title}</h2>
+        </Link>
         <p className='description' dangerouslySetInnerHTML={{ __html: description }} />
         <div className='social'>
           <Link href={`https://www.linkedin.com/sharing/share-offsite/?url=blog-rafael-anguiano.vercel.app/post/${post.id}`} target='_blank' rel='noreferrer'>
@@ -41,7 +52,7 @@ const Post = ({ post, setPage }) => {
           </Link>
         </div>
       </div>
-    </article>
+    </article >
   )
 }
 

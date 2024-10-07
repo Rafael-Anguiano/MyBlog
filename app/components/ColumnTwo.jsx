@@ -1,11 +1,12 @@
-import ListPosts from './ListPosts'
-import PostTags from './PostTags'
+'use client'
+import usePosts from '../stores/usePosts'
+import PostData from './PostData'
 
 const ColumnTwo = () => {
+  const displayInfo = usePosts(state => state.displayInfo)
   return (
     <section className='cards'>
-      <PostTags />
-      <ListPosts />
+      {displayInfo ? <PostData /> : <></>}
     </section>
   )
 }

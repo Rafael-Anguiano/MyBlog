@@ -1,5 +1,5 @@
-import { FaRegComment } from 'react-icons/fa'
 import { getDescription, getImage } from '../../functions/gets'
+import PostContent from '@/app/components/PostContent'
 
 const API_KEY = process.env.REACT_APP_API_KEY
 const BLOG_ID = process.env.REACT_APP_BLOG_ID
@@ -31,19 +31,7 @@ const Page = async ({ params }) => {
 
   return (
     <div className='columns-page'>
-      <section className='page'>
-        <h2>{post?.title}</h2>
-        <div className='details'>
-          <img alt='' className='autor' src={post?.author.image.url} />
-          <small>{post?.author.displayName}</small>
-          <div className='dot' />
-          <small>{post?.published.substring(0, 10)}</small>
-          <div className='dot' />
-          <FaRegComment />
-          <small>{post?.replies.totalItems}</small>
-        </div>
-        <div dangerouslySetInnerHTML={{ __html: post?.content }} className='content' />
-      </section>
+      <PostContent post={post} />
     </div>
   )
 }
