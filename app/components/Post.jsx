@@ -1,12 +1,18 @@
 'use client'
 import Link from 'next/link'
 import { getDescription, getImage, getDate } from '../functions/gets'
-import { BiLike, BiComment, BiShare } from 'react-icons/bi'
+import { BiLike, BiSolidLike, BiComment, BiSolidComment, BiShare, BiSolidShare } from 'react-icons/bi'
+import { useState } from 'react'
 
 const Post = ({ post }) => {
+  const [liked, setLiked] = useState(false)
+  const [comment, setComment] = useState('')
+  const [shared, setShared] = useState(false)
+
+  const date = getDate(post.published)
   const image = getImage(post.content)
   const description = getDescription(post.content)
-  const date = getDate(post.published)
+
   return (
     <article className='post'>
       <div className='post-info'>
@@ -24,9 +30,9 @@ const Post = ({ post }) => {
         </div>
       </Link>
       <div className='post-interaction'>
-        <button className='icon'><BiLike /></button>
-        <button className='icon'><BiComment /></button>
-        <button className='icon'><BiShare /></button>
+        <button className='icon' onClick={() => setLiked(!liked)}>{liked ? <BiSolidLike /> : <BiLike />}</button>
+        <button className='icon' onClick={() => setComment('Hola')}>{comment ? <BiSolidComment /> : <BiComment />}</button>
+        <button className='icon' onClick={() => setShared(true)}>{shared ? <BiSolidShare /> : <BiShare />}</button>
       </div>
     </article>
   )

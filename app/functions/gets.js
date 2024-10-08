@@ -48,14 +48,22 @@ const getDate = (timestamp) => {
 
   const date = timestampArr[0].split('-')
   const year = Number(date[0])
+  const month = Number(date[1])
+  const day = Number(date[2])
 
   const today = new Date()
   const currentYear = today.getFullYear()
+  const currentMonth = today.getMonth() + 1
+  const currentDay = today.getDate()
 
   let displayYear = true
 
   if (year === currentYear) {
     displayYear = false
+  }
+
+  if (currentDay === day && currentMonth === month && currentYear === year) {
+    return 'Today'
   }
 
   return `${MONTS[Number(date[1])]} ${date[2]}, ${displayYear ? year : ''}`

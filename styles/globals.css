@@ -131,8 +131,6 @@ h2:hover{
     color:darkcyan;
 }
 
-
-
 .post{
   background: #EEE;
   width: 100%;
@@ -148,12 +146,13 @@ h2:hover{
   padding: 0.5rem;
   display: flex;
   flex-direction: row;
-  justify-content: start;
+  justify-content: flex-start;
   align-items: center;
 }
 
 .post-info img {
   margin-inline: 0.4rem;
+  margin-right: 0.7rem;
 }
 
 .post-info div {
@@ -161,8 +160,9 @@ h2:hover{
   flex-direction: column;
 }
 
-.post-info div p:first-child {
+.post-author {
   font-weight: bold;
+  color: #000;
 }
 
 .post-info div {
@@ -202,10 +202,16 @@ h2:hover{
   display:flex;
 }
 
+.post-interaction button:first-child {
+  border-left: none;
+}
+
 .post-interaction button {
   width:100%;
   padding: 0.5rem;
   border: none;
+  border-top: 1px solid #ddd;
+  border-left: 1px solid #ddd;
 }
 
 .post-interaction .icon {
