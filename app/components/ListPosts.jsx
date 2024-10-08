@@ -11,7 +11,7 @@ const fetchPosts = async () => {
 }
 
 const ListPosts = async () => {
-  const list = await fetchPosts();
+  const list = await fetchPosts()
   return (
     <article className='recent-post'>
       <h3>Recent Posts</h3>
