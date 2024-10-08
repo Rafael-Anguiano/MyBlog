@@ -4,7 +4,7 @@ import PostContent from '@/app/components/PostContent'
 const API_KEY = process.env.REACT_APP_API_KEY
 const BLOG_ID = process.env.REACT_APP_BLOG_ID
 
-export async function generateMetadata({ params, searchParams }, parent) {
+export async function generateMetadata ({ params, searchParams }, parent) {
   const id = params.id
   const post = await fetch(`https://www.googleapis.com/blogger/v3/blogs/${BLOG_ID}/posts/${id}?key=${API_KEY}`, { cache: 'no-store' })
     .then((res) => res.json())

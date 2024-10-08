@@ -19,13 +19,13 @@ const getImage = (content) => {
 }
 
 const getInfo = (content) => {
-  const searchTerm = ">";
-  const endTerm = "<"
-  const infoStartIndex = content.indexOf(searchTerm) + 1;
+  const searchTerm = '>'
+  const endTerm = '<'
+  const infoStartIndex = content.indexOf(searchTerm) + 1
   let info = content.slice(infoStartIndex)
-  const infoEndIndex = info.indexOf(endTerm);
+  const infoEndIndex = info.indexOf(endTerm)
   info = info.slice(0, infoEndIndex)
-  return info;
+  return info
 }
 
 export { getDescription, getImage, getInfo }

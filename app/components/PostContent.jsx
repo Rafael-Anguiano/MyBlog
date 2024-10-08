@@ -38,4 +38,4 @@ const PostContent = ({ post }) => {
   )
 }
 
-export default PostContent;
+export default PostContent

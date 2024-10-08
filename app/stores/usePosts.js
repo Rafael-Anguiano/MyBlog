@@ -1,15 +1,15 @@
-import { create } from 'zustand';
+import { create } from 'zustand'
 
 export default create(
   (set) => {
     return {
       displayInfo: false,
       // Values
-      author: "",
+      author: '',
       date: '',
-      description: "",
+      description: '',
       tags: [],
-      image: "",
+      image: '',
 
       // Actions
       setPostInfo: (author, date, description, tags) => {

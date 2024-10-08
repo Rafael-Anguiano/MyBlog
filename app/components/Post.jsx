@@ -14,7 +14,7 @@ const Post = ({ post, setPage }) => {
 
   useEffect(() => {
     if (displayInfo) {
-      showInfo(false);
+      showInfo(false)
     }
   }, [])
 
@@ -33,7 +33,7 @@ const Post = ({ post, setPage }) => {
           <FaRegComment className='comments' />
           <small className='comments'>{post.replies.totalItems}</small>
         </div>
-        <Link href={`/post/${post.id}`} >
+        <Link href={`/post/${post.id}`}>
           <h2 className='subtitle'>{post.title}</h2>
         </Link>
         <p className='description' dangerouslySetInnerHTML={{ __html: description }} />
@@ -52,7 +52,7 @@ const Post = ({ post, setPage }) => {
           </Link>
         </div>
       </div>
-    </article >
+    </article>
   )
 }
 
