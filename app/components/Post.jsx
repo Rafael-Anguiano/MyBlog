@@ -28,6 +28,9 @@ const Post = ({ post }) => {
           <h2 className='subtitle'>{post.title}</h2>
           <p className='description' dangerouslySetInnerHTML={{ __html: description }} />
         </div>
+        <ul className='post-tags'>
+          {post.labels.map((tag, index) => <li key={index}>#{tag}</li>)}
+        </ul>
       </Link>
       <div className='post-interaction'>
         <button className='icon' onClick={() => setLiked(!liked)}>{liked ? <BiSolidLike /> : <BiLike />}</button>

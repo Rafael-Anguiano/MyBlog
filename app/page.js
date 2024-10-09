@@ -4,12 +4,9 @@ const API_KEY = process.env.REACT_APP_API_KEY
 const BLOG_ID = process.env.REACT_APP_BLOG_ID
 
 const fetchPosts = async () => {
-  return fetch(`https://www.googleapis.com/blogger/v3/blogs/${BLOG_ID}/posts?key=${API_KEY}`, {
-    next: {
-      revalidate: 60
-    }
-  })
-    .then(res => res.json())
+  const data = await fetch(`https://www.googleapis.com/blogger/v3/blogs/${BLOG_ID}/posts?key=${API_KEY}`)
+  const posts = await data.json()
+  return posts.items
 }
 
 const HomePage = async () => {
@@ -17,7 +14,7 @@ const HomePage = async () => {
   return (
     <section id='Home'>
       <section className='posts'>
-        {posts.items?.map((post, index) => <Post post={post} key={index} />)}
+        {posts?.map((post, index) => <Post post={post} key={index} />)}
       </section>
     </section>
   )

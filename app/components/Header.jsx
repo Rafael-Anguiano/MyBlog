@@ -15,7 +15,7 @@ const Header = () => {
   return (
     <header className='App-header'>
       <Link href={links[0].route} className='title'>
-        <h1 className='title'>Rafael</h1>
+        <h1 className='title'>N3s</h1>
       </Link>
     </header>
   )
