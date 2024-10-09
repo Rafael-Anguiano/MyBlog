@@ -1,0 +1,92 @@
+.page {
+  width: 51%;
+  background: #EEE;
+}
+
+.author {
+  font-weight: bold;
+  color: #000;
+}
+
+.profilePicture {
+  border-radius: 50%;
+  margin-left: 0.4rem;
+  margin-right: 0.7rem;
+}
+
+.content {
+  width:100%;
+}
+
+.content * {
+  margin:0 !important;
+}
+
+.content p {
+    text-align: justify;
+}
+
+.content a {
+    text-decoration: underline;
+    font-weight: bold;
+    color: cornflowerblue;
+}
+
+.info {
+  display: flex;
+  flex-direction:row;
+  margin-left: 0.5rem;
+}
+
+.info img {
+  margin: 1rem;
+  margin-right: 0.5rem;
+  width: 2.5rem;
+}
+
+.info div {
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items:flex-start;
+  font-size: 0.8rem;
+  color: gray;
+}
+
+@media screen and (max-width: 700px) {
+
+  .page {
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-start;
+    align-items: center;
+    border-inline:none;
+    margin:0;
+    width: 100%;
+  }
+
+  .page * {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .page a {
+    margin: 0 !important;
+  }
+
+  .info {
+    width:100%;
+  }
+
+  .profilePicture {
+    width:3rem;
+    margin-left:1rem;
+    margin-right: 0.7rem;
+  }
+
+  .title {
+    font-size: 1.5rem;
+    padding-inline: 0.8rem;
+  }
+}

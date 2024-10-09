@@ -1,21 +1,19 @@
 'use client'
-import { FaRegComment } from 'react-icons/fa'
 import { getDate } from '../functions/gets'
+import styles from '@/app/components/post-content.module.css'
 
 const PostContent = ({ post }) => {
   const date = getDate(post.published)
   return (
-    <section className='page'>
-      <h2>{post?.title}</h2>
-      <div className='details'>
-        <img alt='' className='autor' src={post?.author.image.url} />
-        <small>{post?.author.displayName}</small>
-        <div className='dot' />
-        <small>{date}</small>
-        <div className='dot' />
-        <FaRegComment />
-        <small>{post?.replies.totalItems}</small>
+    <section className={styles.page}>
+      <div className={styles.info}>
+        <img alt='' src={post?.author.image.url} className={styles.profilePicture} />
+        <div>
+          <p className={styles.author}>{post?.author.displayName}</p>
+          <p>{date}</p>
+        </div>
       </div>
+      <h2 className={styles.title}>{post?.title}</h2>
       <div dangerouslySetInnerHTML={{ __html: post?.content }} className='content' />
     </section>
   )

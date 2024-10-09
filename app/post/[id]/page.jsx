@@ -1,13 +1,10 @@
 import { getDescription, getImage } from '../../functions/gets'
 import PostContent from '@/app/components/PostContent'
-
-const API_KEY = process.env.REACT_APP_API_KEY
-const BLOG_ID = process.env.REACT_APP_BLOG_ID
+import { fetchPost } from '@/app/functions/fetchPosts'
 
 export async function generateMetadata ({ params }, parent) {
   const id = params.id
-  const post = await fetch(`https://www.googleapis.com/blogger/v3/blogs/${BLOG_ID}/posts/${id}?key=${API_KEY}`, { cache: 'no-store' })
-    .then((res) => res.json())
+  const post = await fetchPost(id)
   const image = getImage(post?.content)
   const description = getDescription(post?.content)
   return {
@@ -19,17 +16,11 @@ export async function generateMetadata ({ params }, parent) {
   }
 }
 
-const fetchPage = async (id) => {
-  return fetch(`https://www.googleapis.com/blogger/v3/blogs/${BLOG_ID}/posts/${id}?key=${API_KEY}`, { cache: 'no-store' })
-    .then(res => res.json())
-}
-
 const Page = async ({ params }) => {
   const { id } = params
-  const post = await fetchPage(id)
-
+  const post = await fetchPost(id)
   return (
-    <div className='columns-page'>
+    <div className='page-container'>
       <PostContent post={post} />
     </div>
   )

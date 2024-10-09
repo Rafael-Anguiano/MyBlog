@@ -1,3 +1,4 @@
+import styles from '@/app/components/header.module.css'
 import Link from 'next/link'
 
 const links = [
@@ -13,9 +14,9 @@ const links = [
 
 const Header = () => {
   return (
-    <header className='App-header'>
-      <Link href={links[0].route} className='title'>
-        <h1 className='title'>N3s</h1>
+    <header className={styles.header}>
+      <Link href={links[0].route}>
+        <h1 className={styles.header}>N3s</h1>
       </Link>
     </header>
   )

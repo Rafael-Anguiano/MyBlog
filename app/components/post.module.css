@@ -1,0 +1,88 @@
+.post {
+  background: #EEE;
+  width: 100%;
+  margin-bottom: 0.8rem;
+  border-bottom: 2px solid #aaa;
+}
+
+.profilePicture {
+  border-radius: 50%;
+  margin-inline: 0.4rem;
+  margin-right: 0.7rem;
+}
+
+.info {
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.infoText {
+  display:flex;
+  flex-direction: column;
+  font-size: 0.8rem;
+  color: gray;
+}
+
+.author {
+  font-weight: bold;
+  color: #000;
+}
+
+.image {
+  width: 100%;
+  cursor:pointer;
+}
+
+.description {
+  color: #444;
+  padding-left: 1.2rem;
+  padding-right: 1.5rem;
+  padding-bottom: 0.7rem;
+  text-align: justify;
+  text-align: justify;
+  overflow: hidden;
+}
+
+.title{
+  font-weight: bold;
+  font-size: 1.2em;
+  padding-inline: 1rem;
+  padding-block: 0.7rem;
+  text-align: left;
+}
+
+.tags {
+  list-style: none;
+  display: flex;
+  padding-inline: 1.2rem;
+  gap: 0.5rem;
+  padding-bottom: 0.7rem;
+}
+
+.tag {
+  color: #888;
+  font-weight: 500;
+  font-size: 0.7rem;
+}
+
+.interactions {
+  width:100%;
+  display:flex;
+  flex-direction:row;
+}
+
+.icon:first-child {
+  border-left: none;
+}
+
+.icon {
+  width:100%;
+  padding: 0.5rem;
+  border: none;
+  border-top: 1px solid #ddd;
+  border-left: 1px solid #ddd;
+  font-size: 1rem;
+}
