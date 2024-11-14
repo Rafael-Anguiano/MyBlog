@@ -1,9 +1,8 @@
-import ColumnTwo from './components/ColumnTwo'
-import Navigation from './components/Navigation'
-import '../styles/globals.css'
+import Header from './components/Header'
 import Head from 'next/head'
+import '../styles/globals.css'
 
-export async function generateMetadata ({ params, searchParams }, parent) {
+export async function generateMetadata () {
   return {
     title: 'Rafael Anguiano | Blog',
     openGraph: {
@@ -23,11 +22,8 @@ export default function RootLayout ({ children }) {
       </Head>
       <body>
         <main>
-          <Navigation />
-          <div className='columns'>
-            {children}
-            <ColumnTwo />
-          </div>
+          <Header />
+          {children}
         </main>
       </body>
     </html>
