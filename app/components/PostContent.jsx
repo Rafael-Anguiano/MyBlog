@@ -14,7 +14,7 @@ const PostContent = ({ post }) => {
         </div>
       </div>
       <h2 className={styles.title}>{post?.title}</h2>
-      <div dangerouslySetInnerHTML={{ __html: post?.content }} className='content' />
+      <div dangerouslySetInnerHTML={{ __html: post?.content }} className={styles.content} />
     </section>
   )
 }

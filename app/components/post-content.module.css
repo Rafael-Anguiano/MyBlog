@@ -1,6 +1,10 @@
 .page {
   width: 51%;
   background: #EEE;
+  flex-direction: column;
+  display: flex;
+  justify-content: flex-start;
+  padding: 1rem;
 }
 
 .author {
@@ -12,24 +16,6 @@
   border-radius: 50%;
   margin-left: 0.4rem;
   margin-right: 0.7rem;
-}
-
-.content {
-  width:100%;
-}
-
-.content * {
-  margin:0 !important;
-}
-
-.content p {
-    text-align: justify;
-}
-
-.content a {
-    text-decoration: underline;
-    font-weight: bold;
-    color: cornflowerblue;
 }
 
 .info {
@@ -53,40 +39,44 @@
   color: gray;
 }
 
+.content img {
+  max-width: 100%;
+  height: auto;
+  aspect-ratio: 16/9;
+}
+
+.content p {
+  width: 100%;
+  margin-block: 1rem;
+}
+
+.content a {
+  margin: 0 !important;
+  width: 100% !important;
+}
+
 @media screen and (max-width: 700px) {
 
   .page {
-    display:flex;
-    flex-direction:column;
-    justify-content:flex-start;
-    align-items: center;
-    border-inline:none;
-    margin:0;
     width: 100%;
+    padding: 1rem;
+  }
+  .title {
+    margin-top: 0.2rem;
+    margin-bottom: 1rem;
+  }
+  .info img {
+    width: 2rem;
   }
 
-  .page * {
-    width: 100%;
-    margin: 0;
-    padding: 0;
-  }
-
-  .page a {
+  .content p a {
     margin: 0 !important;
   }
 
-  .info {
-    width:100%;
+  .content img {
+    max-width: 100%;
   }
-
-  .profilePicture {
-    width:3rem;
-    margin-left:1rem;
-    margin-right: 0.7rem;
-  }
-
-  .title {
-    font-size: 1.5rem;
-    padding-inline: 0.8rem;
+  .content p {
+    margin-block: 1rem;
   }
 }
